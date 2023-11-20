@@ -1,0 +1,50 @@
+*{
+    MARGIN: 0;
+    padding: 0;
+}
+h1{
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+h2{
+    font: 20px lighter sans-serif;
+}
+
+header,section,footer, aside,nav, article, hgroup{
+    display: block;
+}
+body{
+    text-align: center;
+
+}
+#agrupar{
+    width: 1000px;
+    background: #6c5ce7;
+    margin: 10px auto;
+}
+header{
+    text-align: left;
+    background: #fd79a8;
+    padding: 20px;
+    border: 1px solid gray;
+}
+nav{
+    text-align: left;
+    background: #00b894;
+    padding: 5px 10px;
+    border: 1px solid gray;
+
+}
+nav li{
+    list-style: none;
+    padding: 5px;
+    font: bold 14px arial;
+    display: inline-block;
+
+}
+section{
+    padding: 20px;
+    width: 700px;
+    float:left;
+}
