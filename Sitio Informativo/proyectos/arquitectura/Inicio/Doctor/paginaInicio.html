@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página del Doctor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="titulo">"No llevar otro propósito que el bien y la salud de los enfermos"</h1>
+            <div class="botones-header">
+                <button class="boton-cerrar" onclick="cerrarSesion()">Cerrar Sesión</button>
+                <button class="boton-perfil" onclick="window.location.href='perfilDoctor.html'">Perfil</button>
+            </div>
+            <a href="#" class="imagen-derecha">
+                <img src="medicine-logo-golden-free-png.png" alt="Imagen">
+            </a>
+        </div>
+
+        <div class="bienvenida">
+            <h2 id="bienvenidaDoctor">Bienvenido, Doctor</h2>
+        </div>
+
+        <div class="tabs">
+            <div class="tab" data-tab="ver-citas" onclick="changeTab('verCitasContent')">Ver Citas Pendientes</div>
+            <div class="tab" data-tab="definir-horarios" onclick="changeTab('definirHorariosContent')">Definir Horarios</div>
+            <div class="tab" data-tab="editar-datos" onclick="changeTab('editarDatosContent')">Editar Datos Personales</div>
+        </div>
+
+        <div class="content active" id="verCitasContent">
+            <!-- Contenido de la pestaña Ver Citas Pendientes -->
+            <h2>Ver Citas Pendientes</h2>
+            <table id="citasTable">
+                <thead>
+                    <tr>
+                        <th>Fecha y Hora</th>
+                        <th>Nombre del Paciente</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se llenará la tabla con las citas pendientes y realizadas -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content" id="definirHorariosContent">
+            <h2>Definir Horarios</h2>
+            <form id="horarioForm">
+                <label for="diasSemana">Día a Trabajar:</label>
+                <select name="diasSemana" id="diasSemana" multiple>
+                    <option value="1">Lunes</option>
+                    <option value="2">Martes</option>
+                    <option value="3">Miércoles</option>
+                    <option value="4">Jueves</option>
+                    <option value="5">Viernes</option>
+                    <option value="6">Sábado</option>
+                    <option value="7">Domingo</option>
+                </select>
+
+                <label for="horaInicio">Hora de Inicio:</label>
+                <input type="time" name="horaInicio" id="horaInicio"  >
+
+                <label for="horaFin">Hora Final:</label>
+                <input type="time" name="horaFin" id="horaFin"  >
+                
+
+                <button type="button" onclick="guardarHorario()">Guardar Horario</button>
+            </form>
+
+            <table id="horariosTable">
+                <thead>
+                    <tr>
+                        <th>Día a Trabajar</th>
+                        <th>Hora de Inicio</th>
+                        <th>Hora Final</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    
+                    <!-- Aquí se llenará la tabla con los horarios del doctor -->
+                </tbody>
+            </table>
+        </div>
+        <div class="content" id="editarDatosContent">
+            <!-- Contenido de la pestaña Editar Datos Personales -->
+            <h2>Editar Datos Personales</h2>
+            <form id="editarDatosForm">
+                <label for="nuevaContrasena">Nueva Contraseña:</label>
+                <input type="password" name="nuevaContrasena" id="nuevaContrasena" required>
+            
+                <label for="confirmarContrasena">Confirmar Contraseña:</label>
+                <input type="password" name="confirmarContrasena" id="confirmarContrasena" required>
+            
+                <button type="button" onclick="cambiarContrasena()">Cambiar Contraseña</button>
+            </form>
+        </div>
+    </div>
+    <!-- Vincula los scripts externos -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+

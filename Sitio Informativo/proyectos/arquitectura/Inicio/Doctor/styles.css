@@ -1,0 +1,194 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Utilizamos un gradiente de colores */
+    /*background-image: linear-gradient(135deg, #00a6e893, #80ed999f);
+    /* Agregamos una imagen de fondo para darle un toque artístico */
+    background-image: linear-gradient(135deg, #00a8e8, #80ed99, rgba(237, 241, 223, 0.8)), url("back.png");
+    /* Hacemos que la imagen de fondo no se repita y ocupe todo el fondo */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #edf1dff3; /* Fondo blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h1 {
+    font-style:italic;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #030303; /* Color azul brillante */
+}
+
+.tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    background-color: #2fd178ef; /* Fondo azul llamativo para las pestañas no activas */
+    color: #fff; /* Texto blanco para las pestañas no activas */
+    font-weight: bold;
+}
+
+.tab.active {
+    background-color: #45ddb0; /* Fondo azul más oscuro para la pestaña activa */
+}
+
+.content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+    background-color: #f7f7f7; /* Fondo suave para el contenido */
+}
+
+.content.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #2fd178ef;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos específicos para la pestaña "Ver Citas Pendientes" */
+#citasTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#citasTable th,
+#citasTable td {
+    padding: 10px;
+    border: 1px solid #007bff; /* Borde azul para las celdas de la tabla */
+    text-align: center; /* Añadimos esta propiedad para centrar el contenido de las celdas */
+    background-color: #f7f7f7; /* Fondo suave para las celdas de la tabla */
+    color: #333; /* Color de texto oscuro para las celdas de la tabla */
+}
+
+#eliminarCitaBtn {
+    background-color: #ff5c5c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Estilos específicos para la pestaña "Definir Horarios" */
+#horariosTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#horariosTable th,
+#horariosTable td {
+    padding: 10px;
+    border: 1px solid #007bff; /* Borde azul para las celdas de la tabla */
+    text-align: center; /* Añadimos esta propiedad para centrar el contenido de las celdas */
+    background-color: #f7f7f7; /* Fondo suave para las celdas de la tabla */
+    color: #333; /* Color de texto oscuro para las celdas de la tabla */
+}
+
+/* Estilos para la tabla "Editar Datos Personales" */
+#datosTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#datosTable th,
+#datosTable td {
+    padding: 10px;
+    border: 1px solid #007bff; /* Borde azul para las celdas de la tabla */
+    text-align: center; /* Añadimos esta propiedad para centrar el contenido de las celdas */
+    background-color: #f7f7f7; /* Fondo suave para las celdas de la tabla */
+    color: #333; /* Color de texto oscuro para las celdas de la tabla */
+}
+.imagen-derecha {
+    display: flex;
+    align-items: center;
+}
+
+.imagen-derecha img {
+    width: 100px; /* Ajusta el tamaño de la imagen según tus preferencias */
+    height: auto;
+    border-radius: 50%; /* Aplicamos un borde circular para simular una moneda */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Agregamos una sombra para darle más realismo */
+    animation: torbellino 2s infinite linear; /* Mantenemos la animación de torbellino */
+}
+/* Estilo para el enlace que contiene la imagen */
+/* Estilo para el enlace que contiene la imagen */
+.imagen-derecha {
+    position: relative;
+    display: inline-block;
+    animation: torbellino 2s infinite linear;
+}
+
+/* Estilo para la imagen */
+.imagen-derecha img {
+    width: 100px; /* Ajusta el tamaño de la imagen según tus preferencias */
+    height: auto;
+    border-radius: 50%; /* Aplicamos un borde circular para simular una moneda */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Agregamos una sombra para darle más realismo */
+}
+
+/* Keyframes para la animación de torbellino */
+@keyframes torbellino {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+

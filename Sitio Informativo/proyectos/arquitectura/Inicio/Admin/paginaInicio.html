@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"> 
+    <title>Página de Inicio</title>
+    
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        function cambiarPestana(pestana) {
+            var pestañas = document.getElementsByClassName('pestana');
+            for (var i = 0; i < pestañas.length; i++) {
+                pestañas[i].style.backgroundColor = '#ccc';
+            }
+            document.getElementById(pestana).style.backgroundColor = '#f2f2f2';
+
+            if (pestana === 'verCitas') {
+                mostrarCitas();
+            } else if (pestana === 'verDoctores') {
+                mostrarDoctores();
+            } else if (pestana === 'verPacientes') {
+                mostrarPacientes();
+            } else if (pestana === 'verAreas') {
+                mostrarAreas();
+            } else {
+                document.getElementById('datosPacientes').innerHTML = '';
+            }
+            localStorage.setItem('pestanaActiva', pestana);
+            var botonesAgregar = document.getElementsByClassName('btn-agregar');
+            for (var i = 0; i < botonesAgregar.length; i++) {
+                var botonesPestana = botonesAgregar[i].getAttribute('data-pestana').split(' ');
+                botonesAgregar[i].style.display = botonesPestana.includes(pestana) ? 'block' : 'none';
+            }
+        }
+
+
+        function mostrarAreas() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("datosPacientes").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open("GET", "datosArea/consultar/consulta.php", true);
+            xhr.send();
+        }
+        function eliminarArea(area) {
+            if (confirm("¿Estás seguro de que deseas eliminar esta área?")) {
+                // Realizar la solicitud AJAX para eliminar el registro
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "datosArea/eliminar/eliminar.php?area=" + encodeURIComponent(area), true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        alert(xhr.responseText);
+                        // Actualizar la lista de áreas después de eliminar
+                        mostrarAreas();
+                    }
+                };
+                xhr.send();
+            }
+        }
+        function mostrarDoctores() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("datosPacientes").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open("GET", "datosDoctor/consultar/consulta.php", true);
+            xhr.send();
+        }
+        // Función para eliminar un registro
+        function eliminarDoctor(idDoctor) {
+            if (confirm('¿Estás seguro de que deseas eliminar este registro de Doctor?')) {
+                // Realizar una solicitud AJAX para eliminar el registro
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            // La solicitud fue exitosa, aquí puedes realizar alguna acción adicional si lo deseas
+                            console.log(xhr.responseText);
+                            // Recargar la página después de eliminar el registro
+                            location.reload();
+                        } else {
+                            // Hubo un error al procesar la solicitud, muestra un mensaje de error o realiza alguna acción adicional si lo deseas
+                            console.error('Error al eliminar el registro.');
+                        }
+                    }
+                };
+                xhr.open('GET', 'datosDoctor/eliminar/eliminar.php?idDoctor=' + idDoctor, true);
+                xhr.send();
+            }
+        }
+        function editarDoctor(idDoctor) {
+            // Redirigir al formulario de edición con el ID de la cita
+            window.location.href = "datosDoctor/editar/editarDoctor.php?id=" + idDoctor;
+        }
+        function mostrarPacientes() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("datosPacientes").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open("GET", "datosPaciente/consultar/consulta.php", true);
+            xhr.send();
+        }
+        function eliminarPaciente(idPaciente) {
+            if (confirm("¿Estás seguro de que deseas eliminar este registro de paciente?")) {
+                // Realizar la solicitud AJAX para eliminar el registro
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "datosPaciente/eliminar/eliminar.php?idPaciente=" + idPaciente, true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        alert(xhr.responseText);
+                        // Actualizar la lista de pacientes después de eliminar
+                        mostrarPacientes();
+                    }
+                };
+                xhr.send();
+            }
+        }
+        function editarPaciente(idPaciente) {
+            // Redirigir a la página de edición del paciente con el ID del paciente
+            window.location.href = "datosPaciente/editar/editar.php?idPaciente=" + idPaciente;
+        }
+        function mostrarCitas() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("datosPacientes").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open("GET", "datosCita/consultar/consulta.php", true);
+            xhr.send();
+        }
+
+        function eliminarCita(id) {
+            if (confirm("¿Estás seguro de que deseas eliminar esta cita?")) {
+                // Realizar la solicitud AJAX para eliminar el registro
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "datosCita/eliminar/eliminar.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        alert(xhr.responseText);
+                        // Actualizar la lista de citas después de eliminar
+                        mostrarCitas();
+                    }
+                };
+                xhr.send("id=" + id);
+            }
+        }
+
+        function editarCita(id) {
+            // Redirigir al formulario de edición con el ID de la cita
+            window.location.href = "datosCita/editar/editarCita.php?id=" + id;
+        }
+
+        function agregarRegistro(btn) {
+            var pestana = btn.getAttribute('data-pestana');
+
+            // Aquí puedes redirigir a la página de agregar según la pestaña seleccionada
+            if (pestana === 'verCitas') {
+                window.location.href = "datosCita/añadir/añadir.php";
+            } else if (pestana === 'verDoctores') {
+                window.location.href = "datosDoctor/añadir/añadir.php";
+            } else if (pestana === 'verPacientes') {
+                window.location.href = "datosPaciente/añadir/añadir.php";
+            } else if (pestana === 'verAreas') {
+                window.location.href = "datosArea/añadir/añadir.php";
+            }
+
+        }
+        function redireccionar() {
+            // Cambia la URL de abajo por la página a la que deseas redireccionar al hacer clic en "Salir"
+            var urlRedireccion = "../../InicioSesion.html"; // Ejemplo de URL
+            window.location.href = urlRedireccion;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="pestana" id="verCitas" onclick="cambiarPestana('verCitas')">Ver Citas</div>
+        <div class="pestana" id="verDoctores" onclick="cambiarPestana('verDoctores')">Ver Doctores</div>
+        <div class="pestana" id="verPacientes" onclick="cambiarPestana('verPacientes')">Ver Pacientes</div>
+        <div class="pestana" id="verAreas" onclick="cambiarPestana('verAreas')">Ver Areas</div>
+    </div>
+
+    <!-- Botón "Añadir" -->
+    <div class="btn-agregar" data-pestana="verCitas" onclick="agregarRegistro(this)">Añadir Cita</div>
+
+    <!-- Botón "Añadir" para la pestaña "Ver Doctores" -->
+    <div class="btn-agregar" data-pestana="verDoctores" onclick="agregarRegistro(this)">Añadir Doctor</div>
+
+    <!-- Botón "Añadir" para la pestaña "Ver Pacientes" -->
+    <div class="btn-agregar" data-pestana="verPacientes" onclick="agregarRegistro(this)">Añadir Paciente</div>
+
+    <!-- Botón "Añadir" para la pestaña "Ver Horarios" -->
+    <div class="btn-agregar" data-pestana="verAreas" onclick="agregarRegistro(this)">Añadir Area</div>
+    <button class="btn-salir" onclick="redireccionar()">Salir</button>
+    <div id="datosPacientes"></div>
+
+    <script>
+        // Al cargar la página, se restaura la pestaña activa desde el localStorage
+        window.addEventListener('load', function () {
+            var pestanaActiva = localStorage.getItem('pestanaActiva');
+            if (pestanaActiva) {
+                cambiarPestana(pestanaActiva);
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

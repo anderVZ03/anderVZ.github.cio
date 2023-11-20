@@ -1,0 +1,183 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: column; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    min-height: 100vh; 
+}
+.step {
+    display: none;
+}
+
+.container {
+    width: 100%; /* Limita el ancho del formulario */
+            max-width: px; /* Establece un ancho máximo */
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px; 
+}
+
+/* Encabezado */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    display: none;
+   
+}
+.titulo-llamativo h2{
+    font-family: 'Montserrat', sans-serif; /* Utiliza la fuente Montserrat */
+    font-weight: 700; /* Puedes ajustar el peso de la fuente según tus preferencias */
+    font-size: 28px; /* Tamaño de fuente */
+    color: #e66103; /* Color del texto */
+    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+}
+/* Barra de progreso */
+.progress-container {
+    width: 52%; /* Limita el ancho de la barra de progreso */
+    max-width: 600px; /* Establece un ancho máximo */
+   font-size: 25px;
+    padding: 0;
+    display: flex;
+    justify-content:space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    position: relative; /* Para alinear la barra de progreso */
+   
+}
+.progress-bar-completed {
+    background-color: #fac411; /* Color para lo completado */
+    height: 10px;
+    width: 0; /* Porcentaje de completado (ajusta según el progreso) */
+    transition: width 0.3s;
+    border-radius: 5px;
+}
+
+.progress-bar-remaining {
+    background-color: #e0e0e0; /* Color para lo que falta */
+    height: 10px;
+    width: 100%; /* Porcentaje de lo que falta (ajusta según el progreso) */
+    transition: width 0.3s;
+    border-radius: 5px;
+}
+
+
+/* Pasos */
+.step {
+    display: none;
+    padding: 20px 0;
+}
+
+/* Etiquetas y campos de entrada */
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Botones */
+button {
+    background-color: #e66103;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(247, 141, 2);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #888;
+}
+
+/* Fondo del modal */
+.modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+/* Botón de salida en dispositivos móviles */
+.mobile-exit-button {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Cambia 'left' en lugar de 'right' */
+    background-color: #e66103;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 10%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-exit-button i {
+    font-size: 20px;
+    color: #333;
+}
+
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .mobile-exit-button {
+        display: block;
+    }
+    /* Agrega más estilos para dispositivos móviles aquí */
+}

@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header
+{
+    margin-left: 100px;
+}
+
+header {
+    background-color:  #222; /* Cambia el color de fondo y ajusta la opacidad */
+    color:rgba(245, 102, 8, 0.952);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 5px 60px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil al encabezado */
+    position: sticky; /* Agrega posicionamiento relativo */
+    z-index: 1; /* Asegura que el encabezado esté por encima del fondo */
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    font-weight: 400;
+    width: 100%;
+   font-weight: 400;
+   top:0;
+   margin: 0;
+   animation: adjust-header linear both;
+   animation-timeline: scroll();
+ 
+}
+@keyframes adjust-header{
+    to{
+        background: #f22708(255,165,0,0.5);
+        backdrop-filter: blur(30px);
+        font-size: 22px;
+        height: 60px;
+    }
+}
+.header-icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+  margin-right: 150px;
+ 
+}
+
+.logo {
+display: flex;
+align-items: center;
+margin-right: 30px;
+margin-left: 65px;
+}
+.logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+   
+
+
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: relative;
+}
+/* Ajustes para el menú */
+.nav-menu {
+  display: flex; /* Cambia el valor de display para que los elementos sean flexibles */
+  align-items: center; /* Centra verticalmente los elementos */
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-right: 30px; /* Espacio entre los elementos del menú */
+}
+/* Cambia el color y la apariencia de los enlaces activos */
+/* Estilo para los enlaces de navegación */
+.nav-link {
+  color: #ECECEC;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.8s ease;
+  font-weight: 500;
+
+}
+
+.nav-link:not(:last-child) {
+  margin-right: 10px;
+}
+/* Estilo para los enlaces activos */
+.nav-link.active {
+  color:rgba(245, 102, 8, 0.952);
+
+  font-weight: bold;
+}
+
+/* Pseudoelemento para la línea debajo de los enlaces activos */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(245, 102, 8, 0.952);
+  bottom: -22px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* Cambia el estilo de los enlaces al pasar el mouse o estar activos */
+.nav-link:hover,
+.nav-link.active {
+  color: rgba(245, 102, 8, 0.952);
+}
+
+/* Estilos para la línea en los enlaces seleccionados */
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+/* Estilos para la línea en los enlaces seleccionados */
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    margin-left:auto;
+    margin-right: 50px;
+   
+}
+
+.user-icon,
+.cart-icon {
+  font-size: 22px;
+    color: #ececec;;
+    cursor: pointer;
+    margin: 0 10px;
+    position: relative;
+    margin-left: 680px;
+}
+#inicio.active {
+  background-color: rgba(245, 102, 8, 0.952);
+  color: #000;
+  font-weight: bold;
+}
+#menu.active {
+  background-color: rgba(245, 102, 8, 0.952);
+  color: #000;
+  font-weight: bold;
+}
+#servicios.active {
+  background-color: rgba(245, 102, 8, 0.952);
+  color: #000;
+  font-weight: bold;
+}
+#contacto.active {
+  background-color: rgba(245, 102, 8, 0.952)C;
+  color: #000;
+  font-weight: bold;
+}
+
+
+#carrito {
+  position: relative;
+}
+
+#carrito-ventana {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+#carrito:hover #carrito-ventana {
+  display: block;
+}
+
+#lista-productos {
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 220px;
+    text-align: left;
+    z-index: 2;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 15px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+  
+}
+.user-dropdown.show {
+    display: block;
+    
+}
+.user-icon.active .user-dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.user-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+.user-dropdown li {
+    margin-bottom: 12px;
+}
+.user-dropdown a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.user-dropdown a:hover {
+    background-color: #f5f5f5;
+    color: #a3a0a0;
+}
+.user-icon:hover .user-dropdown {
+    display: block;
+}
+.user-icon.active i {
+  color: rgba(245, 102, 8, 0.952); /* Cambia el color a naranja cuando está activo */
+}
+nav ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+.header-icons .cart-icon{
+    position: relative;
+    margin-left: 10px; /* Agrega un margen a la izquierda del icono de carrito */
+
+}
+.cart-icon .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    background-color:rgba(245, 102, 8, 0.952);;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* Estilo para el icono del carrito */
+.cart-icon:hover {
+    color: rgba(245, 102, 8, 0.952); /* Cambia el color al interactuar con el icono */
+}
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 20px;
+    transition: opacity 0.3s ease;
+
+    border-radius: 10px;
+
+    
+  }
+  .modal-content {
+    background-color: white;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    border-radius: 10px;
+    
+  }
+  .modal-title {
+    color: #FFA500;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .modal input,
+.modal label {
+  border: none;
+  margin-bottom: 10px;
+ 
+  padding-bottom: 5px; /* Agrega un pequeño espacio inferior para separar visualmente los campos */
+}
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Añade un padding al formulario */
+    background-color: white;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 15px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc; /* Agrega un borde inferior para separar los campos */
+
+    
+  }
+  .icon {
+    padding: 10px;
+    
+  }
+  .input-container i {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #aaa;
+  }
+  
+  .input-icon {
+    font-size: 18px;
+    margin: 0 10px;
+    color: #aaa;
+  }
+  .password-field {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    
+  }
+  .password-toggle {
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+  .input-field {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: #f5f5f5; /* Fondo transparente para los campos de entrada */
+    padding: 8px;
+    font-size: 16px;
+  }
+  .input-field:focus {
+    background-color: #ffffff; /* Cambia el color de fondo cuando el campo está enfocado */
+    box-shadow: none;
+}
+  .input-container input {
+    border: none;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 3px;
+    width: 100%; /* Ancho del 100% */
+  max-width: 300px; 
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .modal input {
+    border: none;
+    background-color: #f5f5f5;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    outline: none; /* Elimina el contorno al hacer clic */
+  }
+
+  .modal-button {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ancho del 100% para que ocupe todo el espacio del formulario */
+    max-width: 300px; /* Ancho máximo para evitar que sea demasiado ancho en pantallas grandes */
+    margin: 20px auto;
+    
+  }
+  .modal-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3px; /* Espacio superior para separar del formulario */
+  }
+  
+  .modal-button:hover {
+    background-color: #FF8C00;
+  }
+  
+  .modal-text {
+    text-align: center;
+    margin-top: 15px;
+    color: #777;
+  }
+
+  
+  .modal-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+  }
+  .modal-link {
+    color: #FFA500;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    
+  }
+  .modal-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .modal-links a {
+    color: #FFA500;
+    transition: color 0.3s ease;
+  }
+  .modal-links a:hover {
+    color: #e9da0a;
+  }
+  
+  .modal-link:hover {
+    color: #FF8C00;
+  }
+
+/* Estilo para el enlace activo */
+.active-modal-link {
+  color: rgb(233, 233, 5); /* Cambia este color al que desees */
+}
+
+  
+/* Existing CSS code */
+/* ... (otros estilos) ... */
+
+.forgot-password {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #777;
+}
+
+.forgot-password a {
+  color: #777;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-align:start;
+}
+
+.forgot-password a:hover {
+  color: #FF8C00;
+}
+
+.modal-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal-link {
+  color: #FFA500;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.modal-link i {
+  margin-right: 5px;
+}
+
+.modal-link:hover {
+  color: #FF8C00;
+}
+
+/* ... (otros estilos) ... */

@@ -1,0 +1,364 @@
+body {
+    background: linear-gradient(to bottom right, #eceeef, #fdfbfb);
+    height: 100vh;
+    margin: 0;
+    font-family: Copperplate, "Copperplate Gothic Light";
+    text-align: center;
+    padding-top: 20vh;
+    width: 100%;
+  }
+  
+  section {
+    width: 100%;
+    margin: auto;
+    padding: 50px 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea todo a la derecha */
+    margin-left: 5%;
+  }
+  
+  .seccion-izquierda {
+    background: linear-gradient(to bottom right, #eceeef, #fdfbfb);
+  }
+  
+  .seccion-derecha {
+    background: linear-gradient(to bottom right, #fdfbfb, #eceeef);
+  }
+  
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; /* Asegura que el contenido esté en fila */
+  }
+  
+  .contenido p {
+    max-width: 100%; /* Ajusta según sea necesario */
+  }
+  
+  .contenido img {
+    max-width: 30%; /* Ajusta según sea necesario */
+    height: auto;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  img {
+    max-width: 100%; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+  }
+  
+  
+
+  
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    width: 100%;
+    clear:both
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Estilos para la información de contacto */
+  .footer-info-icons {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 40px;
+  }
+  
+  .footer-info-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .footer-info-icon i {
+    font-size: 24px;
+    margin-right: 10px;
+    color:#7798dd;
+  }
+  
+  .footer-info-icon p {
+    margin: 0;
+    font-size: 16px;
+    color: #aaa;
+  }
+  .footer-info-icon a {
+    color: #aaa; /* Cambia el color a naranja o el que prefieras */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    transition: color 0.3s ease; /* Agrega una transición de color suave */
+  }
+  
+  .footer-info-icon a:hover {
+    color: #7798dd; /* Cambia el color al pasar el mouse */
+  }
+  /* ... (otros estilos) ... */
+  
+  /* Estilos para los enlaces sociales */
+  .footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .footer-social a {
+    color: #aaa;
+    margin: 0 15px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  
+  }
+  
+  .footer-social a i {
+    font-size: 24px;
+    color: #aaa;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  
+  .footer-social a:hover i,
+  .footer-social a:hover {
+    color: #7798dd;
+  }
+  .footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 20px;
+  }
+  
+  
+  /* Estilos para la sección de suscripción */
+  .footer-subscribe {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .footer-subscribe p {
+    color: #aaa;
+    font-size: 18px;
+  }
+  
+  .footer-subscribe input[type="email"] {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .footer-subscribe button {
+    padding: 8px 20px;
+    background-color: #7798dd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-subscribe button:hover {
+    background-color: #ff9900;
+  }
+  
+  /* Estilos para los enlaces de políticas */
+  .footer-policies {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .footer-policies a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-policies a:hover {
+    color: #FFA500;
+  }
+  
+  /* Estilos para la sección de información legal */
+  .footer-legal {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  /* Estilos para el enlace "Volver arriba" */
+  .back-to-top {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .back-to-top a {
+    color: #FFA500;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .back-to-top a:hover {
+    color: #ff9900;
+  }
+  
+  .logoUTM img{
+    width: 150px;
+    height: 150px;
+  }
+  
+  
+  /* Estilos responsivos */
+  @media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-info-icons {
+        margin: 20px auto;
+    }
+    .footer-subscribe,
+    .footer-policies,
+    .footer-legal {
+        text-align: center;
+        margin: 20px 0;
+    }
+  
+    .footer-links,
+    .footer-subscribe,
+    .footer-policies,
+    .footer-legal,
+    .footer-credits,
+    .back-to-top {
+        margin-top: 20px;
+    }
+  
+    .footer-social {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+  
+    .footer-social a {
+        margin: 10px; /* Espacio reducido entre iconos sociales */
+    }
+  
+    
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  #nombre {
+    font-size: 1.8em;
+    border-left: 3px solid black;
+    padding-left: 50px;
+  }
+  
+  #pestañas {
+    display: flex;
+    margin-right: 40px;
+    font-size: 25px;
+  }
+  
+  #pestañas a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    transition: color 0.3s;
+  }
+  
+  #pestañas a:hover {
+    color: #8a2be2;
+  }
+  
+  #espacio{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #button-menu {
+    cursor: pointer;
+    background: none;
+    color: black;
+    border: none;
+    padding: 10px;
+    margin-right: 50px;
+  }
+  
+  #button-menu img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0%);
+  }
+  .nav-open .main-nav {
+    display: flex;
+    flex-direction: column; /* Añadido: Establecer la dirección de la columna */
+    align-items: flex-end; /* Añadido: Alinear los elementos a la derecha */
+    right: 50px;
+    left: auto;
+  }
+  
+  .nav-open .main-nav a {
+    /* Estilos para cada enlace en el menú de navegación */
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    transition: color 0.3s;
+    border: 1px solid transparent; /* Añadido: Borde inicial transparente */
+    display: block; /* Añadido: Mostrar en bloques, uno debajo del otro */
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .nav-open .main-nav a:hover,
+  .nav-open .main-nav a:focus { /* Añadido: Manejar foco para accesibilidad */
+    color: #8a2be2;
+    border-color: #000; /* Añadido: Color del borde al hover/foco */
+  }
+  

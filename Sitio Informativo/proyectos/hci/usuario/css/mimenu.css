@@ -1,0 +1,115 @@
+/* Reset de estilos para eliminar márgenes y paddings predeterminados */
+body.paginamenu, h1, h2, h3, p, ul, li,header,menu-titulo{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Estilos generales */
+body.paginamenu {
+  font-family: Arial, sans-serif;
+  background-image: url('/usuario/images/blanco.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Mantiene la imagen de fondo fija mientras se desplaza */
+  margin: 0; /* Elimina el margen predeterminado del body */
+  padding: 0; /* Elimina el padding predeterminado del body */
+ overflow-x: hidden;/* Evita el desplazamiento horizontal */
+  font-size: 16px;
+}
+
+
+
+
+#menu-titulo {
+  text-align: center;
+  font-size: 40px;
+  color: #e85405fb; /* Color de Menú */
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.menu-grid {
+  /* Estilos para el contenedor de categorías */
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  justify-items: center;
+  margin-bottom: 30px; /* Agrega margen inferior para separar del pie de página */
+    margin-top: 40px;
+    transition: transform 0.5s ease-in-out;
+
+}
+.menu {
+  text-align: center;
+text-decoration: none;
+color: #141111;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+max-width: 250px;
+margin: 0 auto;
+padding: 20px;
+border: px solid #FFA500;
+border-radius: 5px;
+background-color: #fff;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.menu-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  /* Aumentar el tamaño del texto para que sea más legible */
+  color: #333;
+  /* Color del texto */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  /* Agregar un suave sombreado al texto */
+  text-transform: uppercase;
+  /* Convertir el texto a mayúsculas */
+  letter-spacing: 1px;
+  /* Aumentar el espaciado entre las letras para resaltar */
+  text-align: center;
+}
+.menu-slider {
+    overflow: hidden;
+  }
+#categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Tres columnas */
+  /* Dos filas */
+ grid-gap: 30px; /* Ajusta este valor para reducir el espacio entre los cuadros */
+  margin-top: 0;
+  /* Reducir el espacio entre los cuadros */
+
+  /* Reducir el espacio entre el encabezado y los cuadros */
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+
+.menu:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Agregar sombra al hacer hover para un efecto más interactivo */
+}
+
+.menu:active {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Agregar otros estilos si lo deseas */
+}
+.menu img {
+  max-width: 160px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+
+/* ... Tus estilos anteriores ... */

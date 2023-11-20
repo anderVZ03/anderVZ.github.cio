@@ -1,0 +1,14 @@
+/* Estilos para el footer */
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: #fff; /* Color del texto */
+    padding: 20px 0; /* Espaciado interno superior e inferior */
+    text-align: center; /* Alineación del texto al centro */
+    font-size: 14px; /* Tamaño de fuente */
+    margin-top:300px;
+}
+
+/* Estilo para el copyright */
+footer p {
+    margin: 0; /* Elimina los márgenes predeterminados */
+}

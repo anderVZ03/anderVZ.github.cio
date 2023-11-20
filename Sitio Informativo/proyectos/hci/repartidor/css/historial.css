@@ -1,0 +1,270 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+h1{
+    font-family: 'Montserrat', sans-serif; /* Utiliza la fuente Montserrat */
+    font-weight: 700; /* Puedes ajustar el peso de la fuente según tus preferencias */
+    font-size: 36px; /* Tamaño de fuente */
+    color: #e66103; /* Color del texto */
+    text-transform: uppercase; 
+    text-align: center;
+     margin-top: 20px; /* Espacio en la parte superior del título */
+    margin-bottom: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Estilos para la fila de títulos */
+.titulo-fila {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold; /* Texto en negrita para los títulos */
+    background-color:  #d86c426f; /* Color de fondo para los títulos */
+    border-bottom: 2px solid rgba(245, 102, 8, 0.952); /* Línea divisoria debajo de los títulos */
+    border-top-left-radius: 10px; /* Esquinas redondeadas en la parte superior izquierda */
+    border-top-right-radius: 10px; /* Esquinas redondeadas en la parte superior derecha */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-dato {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    color: #333; 
+}
+
+/* Estilos para la lista de pedidos */
+.pedido-lista {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.pedido-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pedido-fila:hover {
+    background-color: #ea793723;
+}
+
+.pedido-dato {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+}
+/* Estilos para el modal de detalles del pedido */
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    padding: 20px;
+    width: 90%;
+   
+    
+}
+.modal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos para los detalles del pedido */
+.detalle-item {
+    margin-bottom: 10px;
+    color: #333;
+    
+}
+
+.detalle-etiqueta {
+    
+    font-weight: bold;
+   
+}
+
+.detalle-dato {
+    flex-grow: 1;
+    text-align: left; /* Alinea el dato a la izquierda */
+    margin-left: 10px; 
+  /* Espacio entre la etiqueta y el dato */
+}
+
+/* Estilos para el botón de Confirmar Entrega */
+button {
+    background-color:rgba(245, 102, 8, 0.952);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    display: block; /* Para centrar el botón en pantallas pequeñas */
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #ffcc00;
+}
+
+/* Estilos para el botón de cierre (X) */
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+/* Estilos para pantallas medianas */
+@media (max-width: 768px) {
+     h1 {
+        font-size: 30px; /* Tamaño de fuente ajustado para pantallas medianas */
+    }
+    .container {
+        padding: 10px;
+    }
+
+    .titulo-fila {
+        margin-top: 20px;
+    }
+
+    .pedido-lista {
+        padding: 10px;
+    }
+
+    .pedido-fila {
+        padding: 5px;
+    }
+
+    .pedido-dato {
+        padding: 3px;
+    }
+    .modal-contenido {
+        max-width: 90%; /* Reduzco el ancho del modal en pantallas medianas */
+    }
+    .modal{
+        max-width: 95%;
+    }
+    .detalle-etiqueta {
+        flex: 40%; /* Ajusto el ancho de la etiqueta en pantallas pequeñas */
+    }
+    .detalle-dato {
+        flex: 60%; /* Ajusto el ancho del dato en pantallas pequeñas */
+        text-align: right; /* Alineo el dato a la derecha en pantallas pequeñas */
+    }
+    .cerrar-modal {
+        top: 5px;
+        right: 5px;
+    }
+}
+
+    
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 576px) {
+     h1 {
+        font-size: 24px; /* Tamaño de fuente ajustado para pantallas pequeñas */
+    }
+    .container {
+        padding: 5px;
+    }
+
+    .titulo-fila {
+        margin-top: 10px;
+    }
+
+    .pedido-lista {
+        padding: 5px;
+    }
+
+    .pedido-fila {
+        padding: 3px;
+    }
+
+    .pedido-dato {
+        padding: 2px;
+    }
+
+    .modal-contenido {
+        max-width: 70%;
+        margin: 20% auto;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 360px) {
+     h1 {
+        font-size: 20px; /* Tamaño de fuente ajustado para pantallas muy pequeñas */
+    }
+    .container {
+        padding: 2px;
+    }
+
+    .titulo-fila {
+        margin-top: 5px;
+    }
+
+    .pedido-lista {
+        padding: 2px;
+    }
+
+    .pedido-fila {
+        padding: 1px;
+    }
+
+    .pedido-dato {
+        padding: 1px;
+    }
+    .modal h2 {
+        font-size: 24px; /* Aumento el tamaño del título en pantallas muy pequeñas */
+    }
+    .detalle-item {
+        flex-direction: column; /* Coloco los detalles uno debajo del otro */
+    }
+    .detalle-etiqueta {
+        flex-basis: 100%; /* Las etiquetas ocupan todo el ancho disponible */
+        text-align: left; /* Alineo el texto de las etiquetas a la izquierda */
+        margin-bottom: 5px; /* Menos espacio entre elementos */
+    }
+    .detalle-dato {
+        flex-basis: 100%; /* Los datos ocupan todo el ancho disponible */
+        text-align: left; /* Alineo el texto de los datos a la izquierda */
+        margin-left: 0; /* Sin espacio entre la etiqueta y el dato */
+    }
+    button {
+        width: 100%; /* Los botones ocupan todo el ancho disponible */
+    }
+    .cerrar-modal {
+        top: 5px; /* Alineo el botón de cierre un poco más arriba */
+        right: 5px; /* Alineo el botón de cierre un poco más a la derecha */
+    }
+
+   
+}

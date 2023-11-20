@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.recuadro {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: #007bff;
+    /* Color protagonista en azul royal */
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    /* Tamaño de fuente para el título */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+    /* Tamaño de fuente para las etiquetas */
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    /* Tamaño de fuente para los campos de texto */
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    /* Color protagonista en azul royal */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    /* Tamaño de fuente para el botón submit */
+    width: 100%;
+    /* Ocupar todo el ancho disponible */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    /* Color más oscuro al hacer hover */
+}
+
+p {
+    text-align: center;
+    color: #007bff;
+    /* Color protagonista en azul royal */
+    margin-top: 10px;
+    font-size: 18px;
+    /* Tamaño de fuente para el texto de resultado */
+}

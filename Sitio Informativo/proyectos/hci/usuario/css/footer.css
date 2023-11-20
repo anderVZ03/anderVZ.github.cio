@@ -1,0 +1,222 @@
+/* Estilos generales */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header,
+.hero
+{
+    margin-left: 100px;}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para la información de contacto */
+.footer-info-icons {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 40px;
+}
+
+.footer-info-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-info-icon i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #FFA500;
+}
+
+.footer-info-icon p {
+    margin: 0;
+    font-size: 16px;
+    color: #aaa;
+}
+.footer-info-icon a {
+    color: #aaa; /* Cambia el color a naranja o el que prefieras */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    transition: color 0.3s ease; /* Agrega una transición de color suave */
+}
+
+.footer-info-icon a:hover {
+    color: #ff9900; /* Cambia el color al pasar el mouse */
+}
+/* ... (otros estilos) ... */
+
+/* Estilos para los enlaces sociales */
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.footer-social a {
+    color: #aaa;
+    margin: 0 15px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  
+}
+
+.footer-social a i {
+    font-size: 24px;
+    color: #aaa;
+    transition: transform 0.3s ease;
+}
+
+
+
+.footer-social a:hover i,
+.footer-social a:hover {
+    color: #FFA500;
+}
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 20px;
+}
+/* Estilos para los enlaces de navegación */
+.footer-links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FFA500;
+}
+
+/* Estilos para la sección de suscripción */
+.footer-subscribe {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-subscribe p {
+    color: #aaa;
+    font-size: 18px;
+}
+
+.footer-subscribe input[type="email"] {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.footer-subscribe button {
+    padding: 8px 20px;
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-subscribe button:hover {
+    background-color: #ff9900;
+}
+
+/* Estilos para los enlaces de políticas */
+.footer-policies {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-policies a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-policies a:hover {
+    color: #FFA500;
+}
+
+/* Estilos para la sección de información legal */
+.footer-legal {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Estilos para el enlace "Volver arriba" */
+.back-to-top {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-to-top a {
+    color: #FFA500;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.back-to-top a:hover {
+    color: #ff9900;
+}
+
+
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .footer-content,
+    .footer-subscribe,
+    .footer-policies,
+    .footer-legal {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .footer-info-icons,
+    .footer-links,
+    .footer-social {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-social {
+        margin-top: 30px;
+    }
+
+    
+}

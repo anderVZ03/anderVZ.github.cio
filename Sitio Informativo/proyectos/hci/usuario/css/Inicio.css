@@ -1,0 +1,452 @@
+/* Reset de estilos para eliminar márgenes y paddings predeterminados */
+body,.info-container h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/usuario/ima/Fondo_Principal.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    font-size: 16px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+
+.hero {
+   
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Ocupar toda la altura de la ventana */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -20px;
+    margin-top: 400px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Resto de los estilos */
+
+
+
+.title-box {
+    position: absolute; /* Posición absoluta para colocar en el borde */
+    left: 175px; /* Colocar en el borde izquierdo */
+    top: 35%; /* Alinea verticalmente en el centro */
+    transform: translateY(-50%); /* Ajusta la alineación vertical */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(247, 141, 2); /* Color de fondo blanco */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    left: auto; /* Remove left positioning */
+    right: auto; /* Remove right positioning */
+    transform: none; /* Remove vertical alignment transformation */
+    margin-top: 10px;
+}
+
+.title-box h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 21px;
+    margin: 0;
+    line-height: 37px;
+}
+.title-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* ... (otros estilos) */
+}
+
+.slogan {
+    position: absolute; /* Posición absoluta para colocar en el borde */
+    left: 175px; /* Colocar en el borde izquierdo */
+    top: 50%; /* Alinea verticalmente en el centro */
+    transform: translateY(-50%); /* Ajusta la alineación vertical */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    margin-top: 0px; /* Espacio entre el título y el eslogan */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    color: #fff;
+    font-weight:900;
+    line-height: 60px;
+    justify-content: center;
+    left: auto; /* Remove left positioning */
+    right: auto; /* Remove right positioning */
+    transform: none; /* Remove vertical alignment transformation */
+
+}
+.slogan p {
+    margin: 0; /* Elimina el margen vertical predeterminado */
+    flex: 1;
+    justify-content: center;
+    text-align: justify;
+}
+
+
+.menu-button-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente el contenido */
+    margin-top:-660px;
+    left: auto; /* Remove left positioning */
+    right: auto; /* Remove right positioning */
+    transform: none; /* Remove vertical alignment transformation */
+    text-align: center;
+
+}
+
+.menu-button {
+    position: static; /* Posición absoluta para colocar en el borde */
+    top: 220%; /* Alinea verticalmente en el centro */
+    transform: translateY(-50%); /* Ajusta la alineación vertical */
+    display: flex;
+    padding: 15px 35px;
+    background-color: rgb(247, 141, 2);
+    color: white;
+    text-decoration: none;
+    font-family: 'Open sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 16px;
+    justify-content: center;
+    text-align: center;
+
+    
+}
+
+.menu-button-container:hover .menu-buttor{
+    background-color: rgb(207, 91, 1);
+    transition: background-color 0.3s ease;
+}
+
+
+.info-container {
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+.restaurant-info .info-content {
+    flex: 1;
+    padding: 0 40px;
+    text-align: left; /* Alinea el texto a la izquierda */
+    
+}
+
+.info-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    justify-items: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    color: #181717;
+    font-weight :900;;
+    line-height: 100px;
+    text-align: center;
+}
+
+.info-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 21px;
+    margin: 0;
+    line-height: 37px;
+    color: #645e5e;
+    text-align: left;
+    align-items: left;
+    margin-left: 0px;
+    margin-right: 500px;
+}
+
+.restaurant-info .info-images {
+    flex: 1;
+    text-align: right;
+     /* Alinea la imagen al centro vertical */
+    margin-top: -330px;
+    margin-left: 320px;
+}
+
+.info-images img {
+    max-width: 50%;
+    height: auto;
+    
+}
+/* ... (your existing styles) ... */
+
+
+.menu-cards-container {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    margin-bottom: 25px;
+    z-index: 1; /* Add this line */
+    width: calc((380px + 20px)*3); /* Adjust as needed */
+   
+
+}
+.menu-section-title {
+    
+    color:  white;
+    margin-bottom: 10px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    margin: 0;
+    line-height:100px;
+    
+}
+
+.menu-card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    margin: 20px 20px;
+    width: 340px;
+    
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    flex: 0 0 auto;
+    scroll-snap-align: start; /* Asegurarse de que las tarjetas se alineen al desplazarse */
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+    cursor: pointer;
+    overflow: hidden;
+   
+}
+
+.menu-card:hover {
+    transform: translateY(1.05);
+}
+
+.menu-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;}
+.menu-card:hover img {
+        transform: scale(1.1); /* Efecto de aumento al hacer hover */
+    }
+.menu-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.menu-card p {
+    font-size: 16px;
+    color: #777777;
+    margin-top: 10px;
+}
+.menu-card .add-to-cart-button {
+    padding: 8px 12px;
+    background-color: #e85405fb;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1px;
+    font-size: 14px;
+}
+
+.menu-card .add-to-cart-button:hover {
+    background-color: #edc110;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px; /* Ajusta el margen según tu diseño */
+    color: #181717;
+}
+ 
+
+.prev-button,
+.next-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #f0e8e8;
+}
+/* ... (your existing styles) ... */
+
+.menu-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    /* Aumentar el tamaño del texto para que sea más legible */
+    color: #333;
+    /* Color del texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    /* Agregar un suave sombreado al texto */
+    text-transform: uppercase;
+    /* Convertir el texto a mayúsculas */
+    letter-spacing: 1px;
+    /* Aumentar el espaciado entre las letras para resaltar */
+}
+.menu-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.cantidad-input {
+    width: 30px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    margin-right: 5px;
+    font-size: 22px;
+}
+.menu-text i{
+    font-size: 14px;
+    margin-left: 5px;
+    color: #888;
+    transition: color 0.3s ease;
+}
+/* Estilo para el texto de descripción */
+.menu-description {
+    display: flex;
+    color: #333;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar la descripción cuando se hace hover en el menú */
+
+
+/* Cambiar el color del ícono de descripción cuando se hace hover en el menú */
+
+
+.menu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Agregar sombra al hacer hover para un efecto más interactivo */
+  }
+  
+  .menu:active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Agregar otros estilos si lo deseas */
+  }
+  .menu img {
+    max-width: 160px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+.menu-price {
+    background-color: #edc110;
+    color: #e85405fb;
+    font-size: 20px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    position: flex;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    z-index: 1;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+
+.cantidad-input {
+    width: 40px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+.menu-highlights {
+    background-image: url('/usuario/images/fondotrajeta.jpg');
+    background-size: cover;
+    background-position: center;
+   background-repeat: no-repeat;
+   padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -650px;
+    
+}
+.menu-cards-wrapper {
+   
+    overflow-x: auto;
+    max-width: 100%; /* Establece el ancho máximo para el contenedor */
+    padding: 30px 0 ; /* Agrega un relleno interno para mejorar la apariencia */
+} 
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f89406;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #333;
+    transition: color 0.3s; /* Agrega una transición suave para el cambio de color */
+
+}
+
+/* Estilos para los iconos de Font Awesome */
+.social-icons a i {
+    font-size: 24px;
+}
+/* Efecto hover para los iconos */
+.social-icons a:hover {
+    color: #d48a2f; /* Cambia el color al color real de la red social al hacer hover */
+}

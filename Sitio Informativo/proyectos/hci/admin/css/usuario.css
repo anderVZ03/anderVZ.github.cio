@@ -1,0 +1,222 @@
+/* Estilos para el cuerpo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+.titulo-llamativo {
+    text-align: center; /* Centrar el título */
+    margin-top: 20px; /* Espacio superior para separarlo del encabezado */
+}
+
+.titulo-llamativo h1 {
+    font-family: 'Montserrat', sans-serif; /* Utiliza la fuente Montserrat */
+    font-weight: 700; /* Puedes ajustar el peso de la fuente según tus preferencias */
+    font-size: 36px; /* Tamaño de fuente */
+    color: #e66103; /* Color del texto */
+    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+}
+/* Estilos para los botones de acción */
+.botones-accion {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: flex-start;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.agregar-cocinero {
+    background-color: rgba(245, 102, 8, 0.952);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-right: 10px;
+}
+
+.agregar-cocinero:hover {
+    background-color: #ee8548;
+    box-shadow: 0 0 5px rgba(245, 102, 8, 0.952);
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    text-align: left;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="password"],
+form input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para los botones */
+#formulario-agregar-cocinero button {
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#formulario-agregar-cocinero button:active {
+    background-color: rgba(245, 102, 8, 0.952);
+}
+
+/* Estilos para la tabla */
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabla-cocineros {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ccc;
+}
+
+.tabla-cocineros th,
+.tabla-cocineros td {
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.tabla-cocineros tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.celda-imagen img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.editar-cocina,
+.eliminar-cocina {
+    background-color: #e9a208;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.editar-cocina:hover,
+.eliminar-cocina:hover {
+    background-color: rgba(245, 102, 8, 0.952);
+}
+
+.editar-cocina:active,
+.eliminar-cocina:active {
+    background-color: rgba(245, 102, 8, 0.952);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .botones-accion {
+        justify-content: flex-start;
+    }
+
+    .agregar-cocinero {
+        margin-left: 0;
+    }
+
+    #formulario-agregar-cocinero button {
+        margin-left: 0;
+    }
+
+    .tabla-cocineros th,
+    .tabla-cocineros td {
+        display: block;
+        text-align: center;
+    }
+
+    .tabla-cocineros tbody tr {
+        display: table-row;
+    }
+
+    .tabla-cocineros tbody td {
+        display: block;
+        text-align: center;
+    }
+
+    .tabla-cocineros th,
+    .tabla-cocineros td {
+        display: table-cell;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #ccc;
+        padding: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+    }
+    
+    .tabla-cocineros .celda-imagen,
+    .tabla-cocineros .celda-nombre,
+    .tabla-cocineros .celda-apellido,
+    .tabla-cocineros .celda-usuario,
+    .tabla-cocineros .celda-Fecha,
+    .tabla-cocineros .celda-acciones,
+    .tabla-cocineros .celda-contraseñas,
+    .tabla-cocineros .celda-  {
+        display: table-cell;
+        text-align: left;
+    }
+}

@@ -1,0 +1,66 @@
+/* ... Tus estilos anteriores ... */
+body.pagcarritovacio, h1, h2, h3, p, ul, li,header,menu-titulo{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* Estilos generales */
+body.pagcarritovacio {
+    font-family: Arial, sans-serif;
+    background-image: url('/inicio/images/blanco.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantiene la imagen de fondo fija mientras se desplaza */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el padding predeterminado del body */
+   overflow-x: hidden;/* Evita el desplazamiento horizontal */
+    font-size: 16px;
+  }
+
+
+
+
+
+.carrito-vacio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh; /* Ajusta la altura deseada */
+    background-color: #fff;
+    margin: 20px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carrito-icono {
+    font-size: 80px;
+    color: #e85405fb; /* Color naranja */
+    margin-bottom: 20px;
+}
+
+.carrito-vacio p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #333;
+    font-weight: 800;
+    line-height: 37px;
+    margin-bottom: 40px;
+}
+
+.ver-menu-button {
+    padding: 15px 40px;
+    background-color: #e85405fb; /* Color naranja */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 22px;
+    text-decoration: none; /* Quital el subrayado */
+    display: inline-block; /* Ajusta el ancho al contenido */
+}
+
+.ver-menu-button:hover {
+    background-color: #edc110; /* Color naranja más claro al hacer hover */
+}
+

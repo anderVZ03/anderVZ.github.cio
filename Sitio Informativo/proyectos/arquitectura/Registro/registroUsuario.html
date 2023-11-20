@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="registroUsuarioCSS.css">
+    <script>
+        // Validación de fecha de nacimiento (debe ser mayor a hoy)
+        function validateDate() {
+            var inputDate = new Date(document.getElementById("nacimiento").value);
+            var today = new Date();
+
+            if (inputDate > today) {
+                document.getElementById("error-nacimiento").innerText = "La fecha de nacimiento no puede ser mayor a hoy.";
+                return false;
+            } else {
+                document.getElementById("error-nacimiento").innerText = "";
+                return true;
+            }
+        }
+
+        // Validación del formulario antes de enviarlo
+        function validateForm() {
+            return validateDate();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="guardarUsuario.php" method="post" onsubmit="return validateForm()">
+            <h1>Registro de Usuario</h1>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" required minlength="8">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="apellidoPaterno">Apellido Paterno:</label>
+            <input type="text" id="apellidoPaterno" name="apellidoPaterno" required>
+            <label for="apellidoMaterno">Apellido Materno:</label>
+            <input type="text" id="apellidoMaterno" name="apellidoMaterno" required>
+            <label for="canton">Cantón:</label>
+            <input type="text" id="canton" name="canton" required>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            <label for="nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="nacimiento" name="nacimiento" required max="">
+
+            <span class="error" id="error-nacimiento"></span>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+    <script>
+        // Obtener el elemento del input de fecha de nacimiento
+        var inputFechaNacimiento = document.getElementById('nacimiento');
+
+        // Obtener la fecha actual
+        var fechaActual = new Date();
+
+        // Formatear la fecha actual para que coincida con el formato del input de fecha
+        var fechaActualFormateada = fechaActual.toISOString().slice(0, 10);
+
+        // Establecer la fecha actual como el valor máximo para el input de fecha
+        inputFechaNacimiento.setAttribute('max', fechaActualFormateada);
+
+        // Validar la fecha de nacimiento cada vez que cambia el valor del input
+        inputFechaNacimiento.addEventListener('change', function () {
+            var fechaSeleccionada = new Date(this.value);
+            if (fechaSeleccionada > fechaActual) {
+                alert('La fecha de nacimiento no puede ser mayor que hoy.');
+                this.value = ''; // Limpiar el valor si es inválido
+            }
+        });
+    </script>
+</body>
+
+</html>

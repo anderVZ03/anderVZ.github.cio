@@ -1,0 +1,343 @@
+/* Estilos para el cuerpo de la página */
+body {
+    margin: 0; /* Elimina los márgenes predeterminados del cuerpo */
+    padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+    font-family: Arial, sans-serif; /* Cambia la fuente predeterminada si lo deseas */
+    background-color: #f2f2f2; /* Cambia el color de fondo si lo deseas */
+}
+
+.titulo-llamativo {
+    text-align: center; /* Centrar el título */
+    margin-top: 20px; /* Espacio superior para separarlo del encabezado */
+}
+
+.titulo-llamativo h1 {
+    font-family: 'Montserrat', sans-serif; /* Utiliza la fuente Montserrat */
+    font-weight: 700; /* Puedes ajustar el peso de la fuente según tus preferencias */
+    font-size: 36px; /* Tamaño de fuente */
+    color: #e66103; /* Color del texto */
+    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+}
+/* Estilos para el botón de agregar */
+.botones-accion {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+    text-align: left; /* Alinea el botón a la derecha */
+    margin-left: 30px; /* Espacio en el margen derecho */
+    margin-top: 20px;
+}
+
+.agregar-plato,
+#btn-filtrar {
+    background-color:rgba(245, 102, 8, 0.952);
+    color: #fff;
+padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+   margin-right: 10px;
+}
+
+.agregar-plato:hover {
+    background-color: #ee8548;
+    box-shadow: 0 0 5px rgba(245, 102, 8, 0.952);
+}
+#formulario-agregar-plato button {
+    background-color: #ffcc00; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+}
+
+/* Estilo cuando el botón está siendo presionado */
+#formulario-agregar-plato button:active {
+    background-color:rgba(245, 102, 8, 0.952); /* Cambiar el color de fondo al hacer clic */
+}
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    text-align: left;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+.modal-contenido-h2{
+    justify-content: center;
+
+}
+form label {
+    display: block; /* Hace que cada etiqueta sea un bloque independiente */
+    margin-bottom: 10px; /* Espacio entre etiquetas y campos */
+}
+
+form input[type="text"],
+form textarea,
+form input[type="number"],
+form input[type="file"] {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 8px; /* Espacio interno en campos */
+    margin-bottom: 10px; /* Espacio entre campos */
+    border: 1px solid #ccc; /* Borde de campos */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+
+/* Estilos para el menú desplegable en pantallas pequeñas */
+#opciones-filtrado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Estilos para el menú desplegable */
+#categoria {
+    width: 100%;
+    max-width: 150px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Estilos para el botón "Filtrar" */
+#filtrar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: left; /* Alinea el botón a la derecha */
+    margin-left: 30px; /* Espacio en el margen derecho */
+    margin-top: 20px;
+}
+.seccion-platos{
+    margin-top: 35px;
+}
+/* Estilos para la tabla */
+.table-responsive {
+    overflow-x: auto; /* Agrega desplazamiento horizontal en pantallas pequeñas */
+    width: 100%;
+    -webkit-overflow-scrolling: touch; /* Desplazamiento suave en dispositivos móviles */
+
+}
+
+.tabla-platos {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ccc; /* Agrega un borde a la tabla */
+
+    
+}
+
+.tabla-platos th,
+.tabla-platos td {
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap; /* Evita el salto de línea en el contenido de las celdas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle; /* Centra verticalmente el contenido en las celdas */
+
+   
+}
+
+/* Estilos para las filas pares/impares */
+.tabla-platos tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para las celdas de imagen */
+.celda-imagen img {
+    max-width: 100px; /* Ajusta el ancho máximo de la imagen según sea necesario */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para el botón "Eliminar" y "Editar" */
+.eliminar-plato,
+.editar-plato {
+    background-color: #e9a208; /* Color de fondo normal */
+    color: #fff; /* Color de texto normal */
+    border: none;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+/* Cambia el color de fondo al hacer clic */
+.eliminar-plato:hover,
+.editar-plato:hover {
+    background-color:rgba(245, 102, 8, 0.952) ; /* Nuevo color de fondo al hacer clic */
+}
+
+/* Cambia el color de fondo cuando el botón está activo (haciendo clic) */
+.eliminar-plato:active,
+.editar-plato:active {
+    background-color:rgba(245, 102, 8, 0.952); /* Nuevo color de fondo cuando está activo */
+}
+/* Estilos para los campos editables */
+.campo-editable {
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que se pueden editar */
+    border: 1px solid #daf6aa; /* Añade un borde alrededor del campo */
+    padding: 5px; /* Agrega un poco de espacio alrededor del contenido del campo */
+    transition: border-color 0.3s; /* Agrega una transición suave al cambiar el color del borde */
+}
+
+/* Estilos para los campos cuando se pasa el cursor sobre ellos */
+.campo-editable:hover {
+    border-color:rgba(245, 102, 8, 0.952) ; /* Cambia el color del borde cuando el cursor pasa sobre el campo */
+}
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    
+    #opciones-filtrado {
+        display: none;
+    }
+
+    /* Estilos para mostrar el botón de filtrar en pantallas pequeñas */
+    #btn-filtrar {
+        display: block;
+        padding: 10px 15px; /* Reduce el espacio en pantallas pequeñas */
+        margin-top: 0;
+    }
+    .tabla-platos {
+        display: block;
+    }
+    
+    .tabla-platos thead {
+        display: none;
+    }
+    
+    .tabla-platos tbody tr {
+        display: table-row;
+        
+    }
+    
+    .tabla-platos tbody td {
+        display: block;
+        text-align: center; /* Centra el contenido en pantallas pequeñas */
+    }
+    .tabla-platos th,
+    .tabla-platos td {
+        display: table-cell;
+        width: 100%;
+    }
+    .tabla-platos td::before,
+    .tabla-platos th::before {
+        content: none;
+    
+    }
+
+    .tabla-platos td:last-child::before {
+        width: 100%;
+    }
+    .tabla-platos tbody tr,
+    .tabla-platos thead tr {
+        display: table-row; /* Vuelve a mostrar las filas en línea */
+    }
+    
+    .tabla-platos thead {
+        display: table-header-group; /* Vuelve a mostrar el encabezado en línea */
+    }
+      /* Añade un estilo específico para las celdas de imagen */
+      .celda-imagen img {
+        
+        max-width: none; /* Permite que la imagen mantenga su tamaño original */
+        margin: 0; /* Elimina el margen */
+    }
+    .tabla-platos .celda-imagen,
+    .tabla-platos .celda-categoria,
+    .tabla-platos .celda-nombre,
+    .tabla-platos .celda-descripcion,
+    .tabla-platos .celda-precio,
+    .tabla-platos .celda-acciones {
+        display: table-cell;
+        text-align: left;
+    }
+
+}
+
+   
+#Categoria {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo según tu diseño */
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Estilo para las opciones de la lista desplegable */
+#Categoria option {
+    padding: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+.btn-limpiar-filtro {
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Borde */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: left; /* Alinea el botón a la izquierda */
+    margin-left: 30px; /* Espacio en el margen derecho */
+    margin-top: 20px;
+}
+
+/* Estilo cuando el botón está siendo presionado */
+.btn-limpiar-filtro:active {
+    background-color: rgba(245, 102, 8, 0.952); /* Cambiar el color de fondo al hacer clic */
+}

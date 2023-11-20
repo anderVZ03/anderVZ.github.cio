@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Doctor</title>
+    <link rel="stylesheet" href="perfildoc.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-picture">
+                <!-- Aquí puedes mostrar la foto de perfil del doctor -->
+                <img src="logo_medi.png" alt="Foto de Perfil" id="fotoPerfil">
+            </div>
+            <div class="profile-info">
+                <h2 id="nombreDoctor">Nombre del Doctor</h2>
+                <p id="especialidad">Especialidad</p>
+                <p id="area">Área</p>
+            </div>
+        </div>
+
+        <div class="profile-content">
+            <!-- Aquí puedes agregar otros elementos para mostrar más información del doctor, como correo y fecha de nacimiento -->
+            <p><strong>Correo:</strong> <span id="correo"></span></p>
+            <p><strong>Fecha de Nacimiento:</strong> <span id="nacimiento"></span></p>
+        </div>
+
+        <!-- Botón para volver a la página de inicio -->
+        <button class="volver-btn" onclick="volverInicio()">Volver a Inicio</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="perfilDoctor.js"></script>
+
+    <script>
+        function volverInicio() {
+            window.location.href = 'paginaInicio.html';
+        }
+    </script>
+</body>
+
+</html>

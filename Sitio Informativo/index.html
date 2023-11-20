@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Anderson Portafolio</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <link rel="shorcut icon" href="images/iconoPestaña.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <header>
+      <div id="nombre">Anderson Velásquez</div>
+      <span id="espacio"></span>
+      <div id="pestañas">
+        <a href="index.html">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#footer">Contacto</a>
+      </div>
+
+      <nav id="nav" class="main-nav">
+        <div class="nav-links">
+          <a class="link-item" href="index.html">Inicio</a>
+          <a class="link-item" href="#proyectos">Proyectos</a>
+          <a class="link-item" href="#footer">Contacto</a>
+        </div>
+      </nav>
+      <button id="button-menu" class="button-menu">
+        <img src="images/desplegable.png" alt="Menú" />
+      </button>
+    </header>
+
+    <div id="presentacion">
+      <div id="texto">
+        <h1>¡Hola!</h1>
+        <h2>Mi nombre es <a href="sobreMi.html">Anderson</a></h2>
+        <p>
+          Tengo 20 años y soy estudiante de la carrera de Ingeniería de
+          Software. Actualmente curso el 5<sup>to</sup>
+          semestre. Gusto mucho de programar, preferentemente orientado al área
+          de backend.
+        </p>
+        <p>
+          Mi objetivo es <strong>desarrollar soluciones innovadoras</strong> que
+          mejoren la eficiencia y resuelvan problemas en el ámbito de la
+          tecnología. Además, disfruto aprendiendo sobre nuevas tecnologías y
+          participando en proyectos desafiantes.
+        </p>
+      </div>
+      <div id="imagen">
+        <img src="images/perfil.png" alt="Tu imagen" class="mi-imagen" />
+      </div>
+    </div>
+
+    <div id="proyectos">
+      <div><h1>Proyectos</h1></div>
+      <div class="filtro-proyectos">
+        <p>Filtrar:</p>
+        <button data-category="all" ="all">All</button>
+        <button data-category="semestre4">Semestre 4</button>
+        <button data-category="semestre5">Semestre 5</button>
+      </div>
+
+      <a
+        href="proyectos/arquitectura/Inicio/Doctor/paginaInicio.html"
+        class="proyecto"
+        data-category="semestre4"
+        onclick="showDetails(this)"
+      >
+        <img src="images/fondoo3.jpg" alt="Proyecto 1" />
+        <div class="proyecto-info">
+          <h3>Agendamiento de Citas Médicas</h3>
+          <p>
+            Sistema de agendamiento de citas médicas para facilitar la
+            programación y gestión de consultas.
+          </p>
+        </div>
+      </a>
+      <a
+        href="proyectos/hci/index.html"
+        class="proyecto"
+        data-category="semestre4"
+        onclick="showDetails(this)"
+      >
+        <img src="images/fondoo2.jpg" alt="Proyecto 2" />
+        <div class="proyecto-info">
+          <h3>UrbanFood</h3>
+          <p>
+            Aplicación para hacer pedidos en línea, dentro de un restaurante.
+          </p>
+        </div>
+      </a>
+      <a
+        href="#"
+        class="proyecto"
+        data-category="semestre5"
+        onclick="showDetails(this)"
+      >
+        <img src="images/fondoo1.jpg" alt="Proyecto 3" />
+        <div class="proyecto-info">
+          <h3>Códigos Casuales</h3>
+          <p>
+            Repositorio de códigos o script escritos por tareas o interés
+            personal
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-info-icons">
+          <div class="footer-info-icon">
+            <i class="fas fa-phone"></i>
+            <p>0961410374</p>
+          </div>
+          <div class="footer-info-icon">
+            <i class="far fa-clock"></i>
+            <p>Lun-Vie: 08:00-20:00</p>
+          </div>
+          <div class="footer-info-icon">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>AV.Universitaria,Portoviejo</p>
+          </div>
+          <div class="footer-info-icon">
+            <i class="far fa-envelope"></i>
+            <p>
+              <a href="mailto:andersonvaslasquez@gmail.com"
+                >andersonvaslasquez@gmail.com</a
+              >
+            </p>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/anderson.velasquez.9822/"
+              target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/and3r_velasquez/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://w.app/AndersonVelasquez" target="_blank"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div class="logoUTM">
+          <img src="images/Logo_utm.png" alt="" />
+        </div>
+      </div>
+      <div class="footer-subscribe">
+        <p>Enviar un correo:</p>
+        <input type="email" placeholder="Tu correo electrónico" />
+        <button>¡Contactar!</button>
+      </div>
+      <div class="footer-policies">
+        <a>Términos y Condiciones</a>
+        <a>Política de Privacidad</a>
+        <a>Protección de Datos Personales</a>
+      </div>
+      <br />
+
+      <div class="footer-credits">
+        © 2023 Anderson Velásquez. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <div id="overlay"></div>
+    <script type="text/javascript" src="js/js.js"></script>
+  </body>
+</html>

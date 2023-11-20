@@ -1,0 +1,152 @@
+
+/* Estilos para hacer la tabla responsive */
+.carrito-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; /* Altura de la ventana */
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+   border-radius: none;
+}
+.titulo-carrito {
+    font-family: 'Montserrat', sans-serif; /* Utiliza la fuente Montserrat */
+    font-weight: 700; /* Puedes ajustar el peso de la fuente según tus preferencias */
+    font-size: 36px; /* Tamaño de fuente */
+    color: #e66103; /* Color del texto */
+    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+    margin-top: 50px;
+    text-align: center;
+}
+.carrito-table th,
+.carrito-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.carrito-table th {
+    background-color: #f08811d0;
+    color: #fff;
+}
+
+/* Estilos para hacer las imágenes responsive */
+.carrito-table img {
+    max-width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.boton-compra-fila {
+    background-color: transparent; /* Fondo transparente para la fila del botón */
+    margin-top: 30px;
+}
+
+.centrar-botones {
+    text-align: center; /* Centrar el contenido horizontalmente */
+    padding: 20px 0; /* Añadir espaciado alrededor del botón */
+   
+}
+/* Estilos para los botones */
+/* Estilos para los botones */
+.ver-menu-button,
+
+.eliminar-producto {
+    padding: 8px 16px;
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+.realizar-compra-button{
+    width: fit-content; /* Ancho según contenido */
+    padding: 10px 20px;
+    margin: -50px auto 50px ; /* Margen inferior añadido */
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+   
+   
+   
+}
+.ver-menu-button:hover,
+
+.eliminar-producto:hover {
+    background-color: rgba(245, 102, 8, 0.952);
+}
+.realizar-compra-button:hover {
+    background-color: #e89716;
+}
+/* Estilos para hacer la tabla scrollable en pantallas pequeñas */
+@media (max-width: 600px) {
+    .carrito-table {
+        overflow-x: auto;
+    }
+}
+
+/* Estilos para los botones y el mensaje de carrito vacío */
+.ver-menu-button,
+.realizar-compra-button,
+.eliminar-producto {
+    padding: 8px 16px;
+    background-color: rgba(245, 102, 8, 0.952);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.carrito-vacio,
+.realizar-compra-button {
+    text-align: center;
+    margin-bottom: 85px;
+}
+
+/* Estilos para el icono del carrito */
+.carrito-icono {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el pie de página */
+/* Agrega tus estilos para el pie de página aquí */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.pagcarrito {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Media query para ajustar estilos en pantallas pequeñas */
+@media (max-width: 768px) {
+    .carrito-table{
+        overflow-x: auto;
+    }
+    .carrito-table th,
+    .carrito-table td {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carrito-table {
+        overflow-x: auto;
+    }
+}

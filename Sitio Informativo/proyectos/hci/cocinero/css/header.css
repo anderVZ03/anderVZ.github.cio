@@ -1,0 +1,294 @@
+
+
+/* Estilos para el header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-wrap: wrap; /* Permite que los elementos del header se envuelvan en pantallas pequeñas */
+
+}
+.nombre-usuario-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos dentro de este contenedor */
+}
+
+
+
+/* Resto de tus estilos */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    max-width: 600px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.panel-navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+.logo {
+    display: flex;
+    align-items:center;
+    margin-right: 0;
+}
+.logo img {
+    width: 100px; /* Ancho del logotipo */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 10px; /* Espacio a la derecha del logotipo (ajusta según sea necesario) */
+}
+/* Menú de navegación principal */
+.nav-menu {
+    flex-grow: 1; /* Permite que el menú de navegación crezca para ocupar el espacio restante */
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinea los elementos de menú a la derecha en pantallas grandes */
+
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding: 5px 10px;
+}
+
+ul li a:hover {
+    color: #ffcc00;
+}
+/* Menú de usuario */
+.menu-usuario {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Mueve el menú de usuario a la izquierda */
+    justify-content: flex-end;
+    
+}
+
+.nombre-usuario {
+    margin-right: 0;
+ 
+}
+
+.menu-dropdown {
+    position: relative;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+.menu-btn a:hover {
+    background-color: #ffcc00;
+}
+.menu-contenido {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color:#fff;
+    border: 1px solid transparent;
+    padding: 22px;
+    display: none;
+    align-content: flex-start;
+}
+.menu-contenido a {
+    text-decoration: none; /* Eliminamos el subrayado */
+    color: #333; /* Cambiamos el color del texto */
+    
+}
+
+/* Cambiamos el color del enlace "Salir" cuando se pasa el mouse sobre él */
+.menu-contenido a:hover {
+    color: #ffcc00;
+}
+.menu-dropdown:hover .menu-contenido {
+    display: block;
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0; /* Reduzco el espacio de relleno para pantallas pequeñas */
+    }
+    
+    body {
+        font-size: 16px; /* Cambia el tamaño de fuente en pantallas pequeñas */
+    }
+    .panel-navegacion {
+        flex-direction: row; /* Cambia la dirección de los elementos a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        text-align: center; /* Centra el texto */
+        justify-content: space-between; /* Espacia los elementos al extremo */
+       margin-right: 10px;
+        padding: 22px; /* Añade un espacio alrededor del panel */
+    }
+    .logo img {
+        width: 60px; /* Reduce el tamaño del logotipo en pantallas pequeñas */
+        margin-right: 0; /* Reduce el espacio a la derecha del logotipo */
+    }
+    .logo {
+        
+        width: 8%; /* Ajusta el ancho del contenedor del logotipo según sea necesario */
+        text-align: left; /* Alinea el logotipo a la izquierda en pantallas grandes */
+        padding: 0; /* Agrega espacio alrededor del logotipo */
+       margin: 0;
+    }
+    ul {
+        flex-direction: row; /* Cambia la dirección de los elementos a columna para pantallas pequeñas */
+        align-items:center; /* Centra los elementos de menú horizontalmente */
+        padding-top: 10px; /* Añade un espacio en la parte superior del menú */
+        text-align: justify;
+        margin-left: 22px;
+        justify-content: flex-start;
+      
+    }
+
+    ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    ul li a {
+        margin:  0; /* Espacio entre elementos de la lista en vertical */
+        padding: 8px; /* Aumentamos el espaciado para una mejor interacción táctil */
+        margin-right: 20px;
+    }
+   
+    
+    .menu-usuario {
+        margin-left: 20px;
+        margin-top: 0; /* Añade espacio en la parte superior del menú de usuario */
+        justify-content: flex-end; /* Centra los elementos del menú de usuario horizontalmente */
+  
+        
+    }
+    .nombre-usuario {
+        margin-right: 0; /* Reduzco el espacio horizontal entre el nombre de usuario y el menú desplegable */
+    }
+    .modal-contenido {
+        max-width: 90%;
+    }
+    .menu-btn {
+        font-size: 14px; /* Reduce el tamaño del botón del menú de usuario */
+    }
+    .menu-contenido {
+        top: 20px; /* Ajusta la posición del menú desplegable en pantallas pequeñas */
+    }
+    .modal-contenido {
+        max-width: 70%;
+        margin: 10% auto; /* Centrar verticalmente en pantallas pequeñas */
+        
+    }
+}
+/* Estilos para pantallas de hasta 450px de ancho */
+@media (max-width: 250px) {
+    /* Agrega aquí tus estilos específicos para pantallas pequeñas */
+    header {
+        padding: 10px 0; /* Ejemplo: Cambia el espacio de relleno del encabezado */
+    }
+    .header-container {
+        
+        max-width: 300px;
+       
+    }
+    body {
+        font-size: 2px; /* Ejemplo: Cambia el tamaño de fuente en pantallas pequeñas */
+    }
+
+    .panel-navegacion {
+        flex-direction: row; /* Ejemplo: Cambia la dirección de los elementos a columna */
+        align-items:flex-start; /* Ejemplo: Centra los elementos horizontalmente */
+        text-align:start; /* Ejemplo: Centra el texto */
+        justify-content: space-between; /* Ejemplo: Espacia los elementos al extremo */
+        margin-right: 10px; /* Ejemplo: Añade margen derecho */
+        padding: 10px; /* Ejemplo: Añade espacio alrededor del panel */
+        font-size: 10px;
+    }
+
+    .logo img {
+        width: 35px; /* Ejemplo: Reduce el tamaño del logotipo en pantallas pequeñas */
+        margin-right: 0; /* Ejemplo: Reduce el espacio a la derecha del logotipo */
+    }
+
+    .logo {
+        width: 8%; /* Ejemplo: Ajusta el ancho del contenedor del logotipo según sea necesario */
+        text-align: left; /* Ejemplo: Alinea el logotipo a la izquierda en pantallas grandes */
+        padding: 0; /* Ejemplo: Agrega espacio alrededor del logotipo */
+        margin: 0;
+    }
+
+    ul {
+        flex-direction: row; /* Ejemplo: Cambia la dirección de los elementos a columna para pantallas pequeñas */
+        align-items: center; /* Ejemplo: Centra los elementos de menú horizontalmente */
+        padding-top: 7px; /* Ejemplo: Añade un espacio en la parte superior del menú */
+        text-align: justify;
+        margin-left: 5px;
+        justify-content: flex-start;
+        
+    }
+
+    ul li {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    ul li a {
+        margin: 0; /* Espacio entre elementos de la lista en vertical */
+        padding: 4px; /* Aumenta el espaciado para una mejor interacción táctil */
+        margin-right: 15px;
+    }
+
+    .menu-usuario {
+        margin-left: 10px;
+        margin-top: 0; /* Añade espacio en la parte superior del menú de usuario */
+        justify-content: flex-end; /* Centra los elementos del menú de usuario horizontalmente */
+    }
+
+    .nombre-usuario {
+        margin-right: 0; /* Reduzco el espacio horizontal entre el nombre de usuario y el menú desplegable */
+    }
+
+    .modal-contenido {
+        max-width: 80%;
+    }
+
+    .menu-btn {
+        font-size: 10px; /* Reduce el tamaño del botón del menú de usuario */
+    }
+
+    .menu-contenido {
+        top: 10px; /* Ajusta la posición del menú desplegable en pantallas pequeñas */
+    }
+
+    .modal-contenido {
+        max-width: 70%;
+        margin: 10% auto; /* Centrar verticalmente en pantallas pequeñas */
+    }
+    .pedidos-en-curso, .historial-de-pedidos {
+        font-size:  inherit; /* Ajusta el tamaño de fuente según tus preferencias */
+    }
+    /* Agrega más estilos específicos para pantallas pequeñas según tus necesidades */
+}

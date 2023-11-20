@@ -1,0 +1,300 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ccac8f;
+}
+
+.contenedor {
+    max-width: 1500px;
+    margin: 15px auto;
+    /* Centrar el contenedor horizontalmente */
+    padding: 20px;
+}
+
+.user-panel {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    /* Cambiamos "right" por "left" para que esté a la izquierda */
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.user-panel i {
+    margin-right: 12px;
+    font-size: 26px;
+    /* Cambiamos "PX" por "px" para que el tamaño funcione correctamente */
+}
+
+.user-action {
+    text-decoration: none;
+    color: #333;
+}
+
+.user-action:first-child {
+    margin-right: 10px;
+}
+
+/* Estilo para el ícono de editar */
+.fa-edit::before {
+    content: "\f044";
+    font-size: 18px;
+}
+
+/* Estilo para el ícono de salir */
+.fa-arrow-circle-right:before {
+    content: "\f0a9";
+    font-size: 18px;
+}
+
+.fa-chevron-down {
+    margin-left: 5px;
+    /* Agregar margen a la izquierda del ícono */
+    font-size: 5px;
+}
+
+.fa-chevron-down::before {
+    font-size: 15px;
+}
+
+/* Estilos despegables */
+.user-dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: 2;
+    background-color: #e4cccc;
+    border: 2px solid #88af85;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 180px;
+}
+.user-dropdown.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #e4cccc;
+    border: 2px solid #88af85;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 180px;
+}
+.user-dropdown a {
+    display: block;
+    color: #201b1b;
+    text-decoration: none;
+    padding: 11px 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+.user-panel:hover .user-dropdown {
+    display: block;
+}
+
+.user-logout {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilos para el carrito de compras */
+.añadir {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #e4cccc;;/*Color del fondo de carrito*/
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer; /* Agregamos un cursor para indicar interactividad */
+    transition: background-color 0.3s; /* Agregamos una transición al cambiar el color de fondo */
+
+}
+
+.añadir img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;}
+
+
+#menu-titulo {
+    text-align: center;
+    font-size: 40px;
+    color: #4f7f5a;
+    /* Color de Menú */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+
+}
+
+
+#categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Tres columnas */
+    grid-template-rows: auto auto;
+    /* Dos filas */
+    grid-gap: 60px;
+    /* Reducir el espacio entre los cuadros */
+    margin-top: 5px;
+    /* Reducir el espacio entre el encabezado y los cuadros */
+    justify-items: center;
+}
+
+.menu {
+    text-align: center;
+    text-decoration: none;
+    color: #141111;
+    display: block;
+    width: 240px;
+    /* Aumentar el ancho de los cuadros */
+    margin: 3px auto;
+    /* Margen entre los recuadros y contenedor */
+    padding: 1px;
+    /* Aumentar el espacio entre el contenido y el borde del cuadro */
+    border: 2px solid #88af85;
+    border-radius: 20px;
+    background-color: #e4cccc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Agregar sombra al hacer hover para un efecto más interactivo */
+}
+
+.menu img {
+    max-width: 160px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.menu-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    /* Aumentar el tamaño del texto para que sea más legible */
+    color: #333;
+    /* Color del texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    /* Agregar un suave sombreado al texto */
+    text-transform: uppercase;
+    /* Convertir el texto a mayúsculas */
+    letter-spacing: 1px;
+    /* Aumentar el espaciado entre las letras para resaltar */
+}
+.menu-text i{
+    font-size: 14px;
+    margin-left: 5px;
+    color: #888;
+    transition: color 0.3s ease;
+}
+/* Estilo para el texto de descripción */
+.menu-description {
+    display: none;
+    color: #333;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar la descripción cuando se hace hover en el menú */
+.menu:hover .menu-description {
+    display: block;
+    opacity: 0.8;
+}
+
+/* Cambiar el color del ícono de descripción cuando se hace hover en el menú */
+.menu:hover .menu-text i {
+    color: #4f7f5a;
+}
+
+
+.menu-price {
+    background-color: #edc110;
+    color: #4f7f5a;
+    font-size: 20px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    z-index: 1;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu:hover .menu-price {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Cambiar el color del ícono de descripción cuando se hace hover en el menú */
+.menu:hover .menu-text i {
+    color: #4f7f5a;
+}
+
+
+/* Estilo para los botones "Añadir al carrito" */
+.add-to-cart-button {
+    padding: 8px 16px;
+    background-color: #4f7f5a;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #88af85;
+}
+
+/* Estilo para los campos de cantidad */
+.cantidad-input {
+    width: 40px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.regresar-button {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    /* Ajusta la posición según sea necesario */
+    padding: 8px 16px;
+    background-color: #b04c41;
+    /* Color rojo */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.regresar-button:hover {
+    background-color: #88af85;;
+    /* Color rojo oscuro al hacer hover */
+}
+.regresar-button i {
+    margin-right: 8px; /* Agrega un margen entre el icono y el texto */
+  }

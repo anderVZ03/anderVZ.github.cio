@@ -1,0 +1,90 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: 'Montserrat', sans-serif; /* Utiliza la fuente Montserrat */
+    font-weight: 700; /* Puedes ajustar el peso de la fuente según tus preferencias */
+    font-size: 36px; /* Tamaño de fuente */
+    color: #e66103; /* Color del texto */
+    text-transform: uppercase; 
+    text-align: center;
+}
+
+.orders-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.order-item {
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+    padding: 8px;
+    background-color: #fff;
+    cursor: pointer;
+   
+}
+
+.order-item:hover {
+    background-color: #f2f2f2;
+}
+
+.order-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+/* Estilos para la tabla de pedidos (inicialmente oculta) */
+.order-details {
+    display: none;
+   
+    padding: 10px;
+    background-color:transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.total-row {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .orders-container {
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .order-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-actions {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+}

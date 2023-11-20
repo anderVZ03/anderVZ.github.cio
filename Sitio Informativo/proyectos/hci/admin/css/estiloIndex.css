@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ccac8f;
+  }
+  
+  .contenedor {
+    max-width: 1500px;
+    margin: 15px auto; /* Centrar el contenedor horizontalmente */
+    padding: 20px;
+  }
+  .user-panel {
+    position: absolute;
+    top:20px;
+    left: 30px; /* Cambiamos "right" por "left" para que esté a la izquierda */
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+ 
+.user-panel i {
+    margin-right: 12px;
+    font-size: 26PX;
+}
+
+.user-action {
+    text-decoration: none;
+    color: #333;
+}
+
+.user-action:first-child {
+    margin-right: 10px;
+}
+.fa-edit::before{
+    font-size: 18px;
+}
+
+/* Estilo para el ícono de salir */
+.fa-arrow-circle-right:before {
+    content: "\f0a9";
+    font-size: 18px;
+}
+.fa-chevron-down {
+    margin-left: 5px; /* Agregar margen a la izquierda del ícono */
+    font-size: 5px;
+  }
+  .fa-chevron-down::before{
+    font-size: 15px;
+  }
+/*Estilos despegables*/
+.user-dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: 2;
+    background-color: #e4cccc;
+    border: 2px solid #88af85;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 180px;
+}
+
+.user-dropdown a {
+    display: block;
+    color: #201b1b;
+    text-decoration: none;
+    padding:  11px 20px;
+    font-family:  'Pacifico', cursive; 
+}
+
+.user-panel:hover .user-dropdown {
+    display:block;
+    
+}
+.user-logout {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+.añadir img {
+    width: 30px;
+    height: auto;
+    margin-right: 8px;
+}
+
+
+  #menu-titulo {
+    text-align: center;
+    font-size: 40px;
+    color: #4f7f5a; /* Color de Menú */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  #categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Tres columnas */
+    grid-template-rows: auto auto;
+    /* Dos filas */
+    grid-gap: 60px;
+    /* Reducir el espacio entre los cuadros */
+    margin-top: 5px;
+    /* Reducir el espacio entre el encabezado y los cuadros */
+    justify-items: center;
+  }
+  
+  .menu {
+    text-align: center;
+    text-decoration: none;
+    color: #141111;
+    display: block;
+    width: 240px;
+    /* Aumentar el ancho de los cuadros */
+    margin: 3px auto;
+    /* Margen entre los recuadros y contenedor */
+    padding: 1px;
+    /* Aumentar el espacio entre el contenido y el borde del cuadro */
+    border: 2px solid #88af85;
+    border-radius: 20px;
+    background-color: #e4cccc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .menu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Agregar sombra al hacer hover para un efecto más interactivo */
+  }
+  
+  .menu img {
+    max-width: 160px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .menu-text {
+    font-family: 'Pacifico', cursive;
+
+    font-size: 18px;
+    /* Aumentar el tamaño del texto para que sea más legible */
+    color: #333;
+    /* Color del texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    /* Agregar un suave sombreado al texto */
+    text-transform: uppercase;
+    /* Convertir el texto a mayúsculas */
+    letter-spacing: 1px;
+    /* Aumentar el espaciado entre las letras para resaltar */}
+  
+/* ... Tus estilos anteriores ... */
+
+
+
+.añadir {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #e4cccc;;/*Color del fondo de carrito*/
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer; /* Agregamos un cursor para indicar interactividad */
+    transition: background-color 0.3s; /* Agregamos una transición al cambiar el color de fondo */
+
+}
+
+.añadir img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+
+

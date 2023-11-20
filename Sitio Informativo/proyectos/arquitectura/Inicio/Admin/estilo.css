@@ -1,0 +1,99 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    position: relative;
+    /* Agrega posición relativa al body */
+}
+
+/* Estilos para el botón de Añadir */
+.btn-agregar {
+    position: absolute;
+    top: 0px;
+    right: 130px;
+    /* Ajusta esta posición para evitar superposición */
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-agregar:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el botón de Salir */
+.btn-salir {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-salir:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para las pestañas */
+.pestana {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+/* Estilo para pestaña activa */
+.pestana[style*='background-color: rgb(242, 242, 242)'] {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para la tabla */
+.table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+}
+
+.table-header {
+    display: flex;
+    background-color: #f2f2f2;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-item {
+    flex: 1;
+    padding: 8px;
+    text-align: center;
+}
+
+.table-row {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-data {
+    flex: 1;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Estilos para el botón de eliminar */
+.table-data button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.table-data button:hover {
+    background-color: #c82333;
+}
