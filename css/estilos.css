@@ -1,7 +1,7 @@
 body {
   background: linear-gradient(to bottom right, #eceeef, #fdfbfb);
   height: 100vh;
-  margin: 0;
+  margin: 0.1;
   font-family: Copperplate, "Copperplate Gothic Light";
     text-align: center;
   padding-top: 20vh;
